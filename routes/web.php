@@ -5,6 +5,37 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/sales', function () {
+    return view('sales');
+})->name('sales');
+
+Route::get('/mascarillas', function () {
+    return view('mascarillas');
+})->name('mascarillas');
+
+Route::get('/jabones', function () {
+    return view('jabones');
+})->name('jabones');
+
+Route::get('/shampoo', function () {
+    return view('shampoo');
+})->name('shampoo');
+
+Route::get('/acondicionador', function () {
+    return view('acondicionador');
+})->name('acondicionador');
+
+Route::get('/serums', function () {
+    return view('serums');
+})->name('serums');
+
+Route::get('/carrito', function () {
+    return view('carrito');
+})->name('carrito');
+
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
