@@ -27,12 +27,7 @@
 
             .flex-center {
                 align-items: center;
-                display: flex;
                 justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
             }
 
             .top-right {
@@ -51,12 +46,15 @@
                 text-align: left;
             }
 
-            .franja-color{
+            .nav{
                 vertical-align: top;
                 background-color:#F58174;
                 height: 55px;
                 width: 100%;
                 border-radius: 19px;
+                display: block;
+                text-align: center;
+                overflow: hidden;
             }
 
             .title {
@@ -65,6 +63,7 @@
             }
 
             .links > a {
+                float: left;
                 color: #1D2A54;
                 background-color: #F58174;
                 padding: 0 10px;
@@ -73,33 +72,24 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                text-align: center;
+                text-decoration: none;
             }
 
-            .m-b-md {
-                align-self: center;
-                margin-bottom: 30px;
+            .img{
+                size: 250 px;
             }
-            .imagen1{
-                width: 100%;
-                height: 280px;
-            }
-            .imagen2{
-                display: flex;
-                align-items:center;   
-                gap:20px;
-                width: 150px;
-                height: 150px;
-            }
+
         </style>
-    
-    
-
-    
-
-     <div class="franja-color">
-        <div class="flex-center position-ref full-height">
+     <div id="barra" class="nav">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div id="vistaingreso" class="top-right links">
+                <a href="{{ route('sales') }}">Sales de Baño</a>
+                <a href="{{ route('mascarillas') }}">Mascarillas Faciales</a>
+                <a href="{{ route('jabones') }}">Jabones Artesanales</a>
+                <a href="{{ route('shampoo') }}">Shampoo Solido</a>
+                <a href="{{ route('acondicionador') }}">Acondicionador Solido</a>
+                <a href="{{ route('serums') }}">Serums</a>
                     @auth
                         <a> {{ Auth::user()->name }} | </a>
                         <a href="{{ url('/home') }}">Inicio</a>
@@ -109,31 +99,24 @@
                         <a href="{{ route('register') }}">Registrarse</a>
                     @endauth
                 </div>
-            @endif
-
-            <div class="content">
-                     <div class="top-left links ">
-                
-                         <a href="{{ route('sales') }}">Sales de Baño</a>
-                         <a href="{{ route('mascarillas') }}">Mascarillas Faciales</a>
-                         <a href="{{ route('jabones') }}">Jabones Artesanales</a>
-                         <a href="{{ route('shampoo') }}">Shampoo Solido</a>
-                         <a href="{{ route('acondicionador') }}">Acondicionador Solido</a>
-                         <a href="{{ route('serums') }}">Serums</a>
-                     </div>
-                </div>
-                </div>
+            @endif                 
             </div>
-        </div>
     </head>
     <body>
-            <img src="land1.png" class="imagen1">
-            <div class="title m-b-md">
+        <div id="img" class="img">
+            <img src="parabenos.png" class="img">
+            <img src="organicos.png" class="img">
+            <img src="aromas.png" class="img">
+            <img src="empaques.png" class="img">
+            <img src="cruelty.png" class="img">
+            
+            <div class="title">
                
-            ¿QUIÉNES SOMOS?
-            <img src="logo.jpg" class="imagen2"> 
+                 ¿QUIÉNES SOMOS?
+            
+                 <img src="logo.jpg" class="img"> 
             </div>
-           
+            </div>
             
         
     </body>
