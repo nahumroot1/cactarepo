@@ -36,12 +36,6 @@
                 top: 18px;
             }
 
-            .top-left {
-                position: absolute;
-                left: 10px;
-                top: 18px;
-            }
-
             .content {
                 text-align: left;
             }
@@ -57,9 +51,19 @@
                 overflow: hidden;
             }
 
-            .title {
-                font-size: 60px;
-                text-align: right;
+            .texto {
+                max-width: 600px;
+                
+               
+            }
+            .texto h1{
+                margin: 0;
+                font-size: 37px;
+            }
+            .texto p{
+                margin-top: 5px;
+                font-size: 25px;
+                font-weight: bold;
             }
 
             .links > a {
@@ -77,9 +81,24 @@
             }
 
             .img{
-                size: 250 px;
+                background-color: #F4F9D2;
+                align-items: center;
+                display: flex;
+                justify-content: space-around;
+                width: 270px;
+                height: auto;
             }
 
+            .img2{
+                width: 350px;
+                height: 350px;
+            }
+            
+            .contenedor{
+                display: flex; 
+                align-items: center;
+                gap: 20px;
+            }
         </style>
      <div id="barra" class="nav">
             @if (Route::has('login'))
@@ -103,22 +122,23 @@
             </div>
     </head>
     <body>
-        <div id="img" class="img">
+   
+        <div id="imagenes" class="img">
             <img src="parabenos.png" class="img">
             <img src="organicos.png" class="img">
             <img src="aromas.png" class="img">
             <img src="empaques.png" class="img">
             <img src="cruelty.png" class="img">
-            
-            <div class="title">
-               
-                 ¿QUIÉNES SOMOS?
-            
-                 <img src="logo.jpg" class="img"> 
-            </div>
             </div>
             
-        
+            <div id="contenido" class="contenedor">
+                <img src="logo.jpg" class="img2"> 
+                    <div id="texto" class="texto">
+                        <h1>¿QUIÉNES SOMOS?</h1> 
+                        <p>Somos una empresa mexicana que formula, produce y ofrece productos cosméticos
+                         y de higiene personal orgánicos, libres de: derivados de petróleo, colorantes,
+                          aromas artificiales y con empaques biodegradables.</p>
+                    </div>
+          </div>
     </body>
-    
 </html>
