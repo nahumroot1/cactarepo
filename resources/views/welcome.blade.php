@@ -80,15 +80,37 @@
                 text-decoration: none;
             }
 
-            .img{
-                background-color: #F4F9D2;
-                align-items: center;
-                display: flex;
-                justify-content: space-around;
-                width: 270px;
-                height: auto;
+            .imagenes-container {
+            background-color: #F4F9D2;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea en pantallas pequeñas */
+            padding: 10px;
+            width: 100%; /* Toma el ancho completo del contenedor */
+            max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
+            margin: 0 auto; /* Centra el contenedor en pantallas grandes */
             }
 
+            .img {
+              width: 18.9%; /* Cada imagen toma el 20% del ancho del contenedor */
+              height: auto;
+              
+            }
+
+            /* Media query para pantallas medianas */
+             @media (max-width: 768px) {
+            .img {
+               width: 32%; /* Cada imagen toma casi la mitad del ancho en pantallas medianas */
+                }
+            }
+
+            /* Media query para pantallas pequeñas */
+            @media (max-width: 480px) {
+            .img {
+            width: 100%; /* Cada imagen toma el ancho completo en pantallas pequeñas */
+            }
+            }
+            
             .img2{
                 width: 350px;
                 height: 350px;
@@ -100,6 +122,8 @@
                 gap: 20px;
             }
         </style>
+
+        
      <div id="barra" class="nav">
             @if (Route::has('login'))
                 <div id="vistaingreso" class="top-right links">
@@ -123,7 +147,7 @@
     </head>
     <body>
    
-        <div id="imagenes" class="img">
+        <div id="imagenes" class="imagenes-container">
             <img src="parabenos.png" class="img">
             <img src="organicos.png" class="img">
             <img src="aromas.png" class="img">
