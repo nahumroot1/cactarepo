@@ -12,7 +12,7 @@
 
         <!-- Styles -->
         <style>
-             html, body {
+            html, body {
                 background-color: #FDF5D7;
                 color: #1D2A54;
                 font-family: 'Raleway', sans-serif;
@@ -20,12 +20,26 @@
                 height: 100vh;
                 margin: 0;
             }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                justify-content: center;
+            }
+
             .top-right {
                 position: absolute;
                 right: 10px;
                 top: 18px;
             }
-            
+
+            .content {
+                text-align: left;
+            }
+
             .nav{
                 vertical-align: top;
                 background-color:#F58174;
@@ -35,6 +49,21 @@
                 display: block;
                 text-align: center;
                 overflow: hidden;
+            }
+
+            .texto {
+                max-width: 600px;
+                
+               
+            }
+            .texto h1{
+                margin: 0;
+                font-size: 37px;
+            }
+            .texto p{
+                margin-top: 5px;
+                font-size: 25px;
+                font-weight: bold;
             }
 
             .links > a {
@@ -50,9 +79,52 @@
                 text-align: center;
                 text-decoration: none;
             }
+
+            .imagenes-container {
+            background-color: #F4F9D2;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea en pantallas pequeñas */
+            padding: 10px;
+            width: 100%; /* Toma el ancho completo del contenedor */
+            max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
+            margin: 0 auto; /* Centra el contenedor en pantallas grandes */
+            }
+
+            .img {
+              width: 18.9%; /* Cada imagen toma el 20% del ancho del contenedor */
+              height: auto;
+              
+            }
+
+            /* Media query para pantallas medianas */
+             @media (max-width: 768px) {
+            .img {
+               width: 32%; /* Cada imagen toma casi la mitad del ancho en pantallas medianas */
+                }
+            }
+
+            /* Media query para pantallas pequeñas */
+            @media (max-width: 480px) {
+            .img {
+            width: 100%; /* Cada imagen toma el ancho completo en pantallas pequeñas */
+            }
+            }
+            
+            .img2{
+                width: 350px;
+                height: 350px;
+            }
+            
+            .contenedor{
+                display: flex; 
+                align-items: center;
+                gap: 20px;
+            }
         </style>
 
-            <div id="barra" class="nav">
+        
+     <div id="barra" class="nav">
             @if (Route::has('login'))
                 <div id="vistaingreso" class="top-right links">
                 <a href="{{ route('sales') }}">Sales de Baño</a>
@@ -74,6 +146,7 @@
             </div>
     </head>
     <body>
-        
+   
+     
     </body>
 </html>
