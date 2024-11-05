@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cactacea</title>
+    <title>Cactacea</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
+    <!-- Styles -->
+     
         <style>
             html, body {
                 background-color: #FDF5D7;
@@ -123,46 +124,57 @@
             }
         </style>
 
-        
-     <div id="barra" class="nav">
-            @if (Route::has('login'))
-                <div id="vistaingreso" class="top-right links">
+
+    <div id="barra" class="nav">
+        @if (Route::has('login'))
+            <div id="vistaingreso" class="top-right links">
                 <a href="{{ route('sales') }}">Sales de Baño</a>
                 <a href="{{ route('mascarillas') }}">Mascarillas Faciales</a>
                 <a href="{{ route('jabones') }}">Jabones Artesanales</a>
                 <a href="{{ route('shampoo') }}">Shampoo Solido</a>
                 <a href="{{ route('acondicionador') }}">Acondicionador Solido</a>
                 <a href="{{ route('serums') }}">Serums</a>
-                    @auth
-                        <a> {{ Auth::user()->name }} | </a>
-                        <a href="{{ url('/home') }}">Inicio</a>
-                    @else
-                        <a>Invitado |</a>
-                        <a href="{{ route('login') }}">Ingresar</a>
-                        <a href="{{ route('register') }}">Registrarse</a>
-                    @endauth
-                </div>
-            @endif                 
+                
+                @auth
+                    <a>{{ Auth::user()->name }} | </a>
+                    <a href="{{ url('/home') }}">Inicio</a>
+                    <!-- Botón de Logout -->
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                    
+                    <!-- Formulario oculto para el logout -->
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                @else
+                    <!-- Aquí irían los enlaces para iniciar sesión y registro si los tienes -->
+                @endauth
             </div>
-    </head>
-    <body>
-   
-        <div id="imagenes" class="imagenes-container">
-            <img src="parabenos.png" class="img">
-            <img src="organicos.png" class="img">
-            <img src="aromas.png" class="img">
-            <img src="empaques.png" class="img">
-            <img src="cruelty.png" class="img">
-            </div>
-            
-            <div id="contenido" class="contenedor">
-                <img src="logo.jpg" class="img2"> 
-                    <div id="texto" class="texto">
-                        <h1>¿QUIÉNES SOMOS?</h1> 
-                        <p>Somos una empresa mexicana que formula, produce y ofrece productos cosméticos
-                         y de higiene personal orgánicos, libres de: derivados de petróleo, colorantes,
-                          aromas artificiales y con empaques biodegradables.</p>
-                    </div>
-          </div>
-    </body>
+        @endif                 
+    </div>
+</head>
+<body>
+
+    <!-- Contenido de la página -->
+    <div id="imagenes" class="imagenes-container">
+        <img src="parabenos.png" class="img">
+        <img src="organicos.png" class="img">
+        <img src="aromas.png" class="img">
+        <img src="empaques.png" class="img">
+        <img src="cruelty.png" class="img">
+    </div>
+    
+    <div id="contenido" class="contenedor">
+        <img src="logo.jpg" class="img2"> 
+        <div id="texto" class="texto">
+            <h1>¿QUIÉNES SOMOS?</h1> 
+            <p>Somos una empresa mexicana que formula, produce y ofrece productos cosméticos
+             y de higiene personal orgánicos, libres de: derivados de petróleo, colorantes,
+              aromas artificiales y con empaques biodegradables.</p>
+        </div>
+    </div>
+</body>
 </html>

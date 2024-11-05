@@ -29,9 +29,7 @@ Route::get('/serums', function () {
     return view('serums');
 })->name('serums');
 
-Route::get('/carrito', function () {
-    return view('carrito');
-})->name('carrito');
+Route::post('/logout', [Auth\LoginController::class, 'logout'])->name('logout');
 
 
 
