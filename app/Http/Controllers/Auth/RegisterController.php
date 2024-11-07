@@ -47,10 +47,24 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // Lista de dominios permitidos
+        $allowedDomains = ['gmail.com', 'outlook.com', 'hotmail.com','yahoo.com','yahoo.com.mx','live.com ','prodigy.net.mx ','icloud.com','msn.com ','aol.com']; 
+
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'name' => ['required', 'string', 'max:255'],
+            'email' => [
+                'required',
+                'string',
+                'email',
+                'max:255',
+                function ($attribute, $value, $fail) use ($allowedDomains) {
+                    $domain = substr(strrchr($value, "@"), 1);
+                    if (!in_array($domain, $allowedDomains)) {
+                        $fail("El dominio del correo electrónico no es válido. Solo se permiten dominios como " . implode(', ', $allowedDomains) . ".");
+                    }
+                },
+            ],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
