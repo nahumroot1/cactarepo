@@ -142,7 +142,7 @@
                     <a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                        Logout
+                        Salir
                     </a>
                     
                     <!-- Formulario oculto para el logout -->
