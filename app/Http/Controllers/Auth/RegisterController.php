@@ -51,7 +51,7 @@ class RegisterController extends Controller
         $allowedDomains = ['gmail.com', 'outlook.com', 'hotmail.com','yahoo.com','yahoo.com.mx','live.com ','prodigy.net.mx ','icloud.com','msn.com ','aol.com']; 
 
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255', 'regex:/^[\pL\s]+$/u'],
             'email' => [
                 'required',
                 'string',
