@@ -150,7 +150,7 @@
                         {{ csrf_field() }}
                     </form>
                 @else
-                    <!-- Aquí irían los enlaces para iniciar sesión y registro si los tienes -->
+                   
                 @endauth
             </div>
         @endif                 
