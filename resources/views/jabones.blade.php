@@ -1,153 +1,124 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cactacea</title>
+    <title>Cactacea</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #FDF5D7;
-                color: #1D2A54;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: #FDF5D7;
+            color: #1D2A54;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                justify-content: center;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: left;
-            }
-
-            .nav{
-                vertical-align: top;
-                background-color:#F58174;
-                height: 55px;
-                width: 100%;
-                border-radius: 19px;
-                display: block;
-                text-align: center;
-                overflow: hidden;
-            }
-
-            .texto {
-                max-width: 600px;
-                
-               
-            }
-            .texto h1{
-                margin: 0;
-                font-size: 37px;
-            }
-            .texto p{
-                margin-top: 5px;
-                font-size: 25px;
-                font-weight: bold;
-            }
-
-            .links > a {
-                float: left;
-                color: #1D2A54;
-                background-color: #F58174;
-                padding: 0 10px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-                text-align: center;
-                text-decoration: none;
-            }
-
-            .imagenes-container {
-            background-color: #F4F9D2;
+        .nav {
+            background-color: #F58174;
+            height: 55px;
+            width: 100%;
+            border-radius: 19px;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea en pantallas pequeñas */
-            padding: 10px;
-            width: 100%; /* Toma el ancho completo del contenedor */
-            max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
-            margin: 0 auto; /* Centra el contenedor en pantallas grandes */
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .links > a {
+            color: #1D2A54;
+            background-color: #F58174;
+            padding: 0 10px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        /* Estilos para el menú desplegable en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #F58174;
+                position: absolute;
+                top: 55px;
+                left: 0;
+                padding: 10px;
+                border-radius: 0 0 19px 19px;
             }
 
-            .img {
-              width: 18.9%; /* Cada imagen toma el 20% del ancho del contenedor */
-              height: auto;
-              
+            .links.show {
+                display: flex;
             }
 
-            /* Media query para pantallas medianas */
-             @media (max-width: 768px) {
-            .img {
-               width: 32%; /* Cada imagen toma casi la mitad del ancho en pantallas medianas */
-                }
+            .menu-icon {
+                display: block;
+                color: #1D2A54;
             }
+        }
+    </style>
+</head>
+<body>
 
-            /* Media query para pantallas pequeñas */
-            @media (max-width: 480px) {
-            .img {
-            width: 100%; /* Cada imagen toma el ancho completo en pantallas pequeñas */
-            }
-            }
-            
-            .img2{
-                width: 350px;
-                height: 350px;
-            }
-            
-            .contenedor{
-                display: flex; 
-                align-items: center;
-                gap: 20px;
-            }
-        </style>
-
-        
-     <div id="barra" class="nav">
-            @if (Route::has('login'))
-                <div id="vistaingreso" class="top-right links">
+    <!-- Barra de navegación -->
+    <div id="barra" class="nav">
+        <span class="menu-icon" onclick="toggleMenu()">☰</span> <!-- Icono de menú (hamburger) -->
+        @if (Route::has('login'))
+            <div id="vistaingreso" class="links">
                 <a href="{{ route('sales') }}">Sales de Baño</a>
                 <a href="{{ route('mascarillas') }}">Mascarillas Faciales</a>
                 <a href="{{ route('jabones') }}">Jabones Artesanales</a>
                 <a href="{{ route('shampoo') }}">Shampoo Solido</a>
                 <a href="{{ route('acondicionador') }}">Acondicionador Solido</a>
                 <a href="{{ route('serums') }}">Serums</a>
-                    @auth
-                        <a> {{ Auth::user()->name }} | </a>
-                        <a href="{{ url('/home') }}">Inicio</a>
-                    @else
-                        <a>Invitado |</a>
+                
+                @auth
+                    <a>{{ Auth::user()->name }} | </a>
+                    <a href="{{ url('/home') }}">Inicio</a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Salir
+                    </a>
+                    
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                @else
+                <a>Invitado |</a>
                         <a href="{{ route('login') }}">Ingresar</a>
                         <a href="{{ route('register') }}">Registrarse</a>
-                    @endauth
-                </div>
-            @endif                 
+                @endauth
             </div>
-    </head>
-    <body>
-   
-       
-    </body>
+        @endif                 
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const links = document.getElementById("vistaingreso");
+            links.classList.toggle("show");
+        }
+    </script>
+</body>
 </html>
 

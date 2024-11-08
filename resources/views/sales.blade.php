@@ -55,48 +55,6 @@
             text-transform: uppercase;
         }
 
-        .imagenes-container {
-            background-color: #F4F9D2;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea en pantallas pequeñas */
-            padding: 10px;
-            width: 100%; /* Toma el ancho completo del contenedor */
-            max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
-            margin: 0 auto; /* Centra el contenedor en pantallas grandes */
-            }
-
-            .img2{
-                width: 350px;
-                height: 350px;
-            }
-            
-            .contenedor{
-                display: flex; 
-                align-items: center;
-                gap: 20px;
-            }
-
-            .img {
-              width: 18.9%; /* Cada imagen toma el 20% del ancho del contenedor */
-              height: auto;
-              
-            }
-
-            .texto {
-                max-width: 600px;
-            }
-
-            .texto h1{
-                margin: 0;
-                font-size: 37px;
-            }
-            .texto p{
-                margin-top: 5px;
-                font-size: 25px;
-                font-weight: bold;
-            }
-
         /* Estilos para el menú desplegable en pantallas pequeñas */
         @media (max-width: 768px) {
             .links {
@@ -161,23 +119,5 @@
             links.classList.toggle("show");
         }
     </script>
-
-<div id="imagenes" class="imagenes-container">
-            <img src="parabenos.png" class="img">
-            <img src="organicos.png" class="img">
-            <img src="aromas.png" class="img">
-            <img src="empaques.png" class="img">
-            <img src="cruelty.png" class="img">
-            </div>
-            
-            <div id="contenido" class="contenedor">
-                <img src="logo.jpg" class="img2"> 
-                    <div id="texto" class="texto">
-                        <h1>¿QUIÉNES SOMOS?</h1> 
-                        <p>Somos una empresa mexicana que formula, produce y ofrece productos cosméticos
-                         y de higiene personal orgánicos, libres de: derivados de petróleo, colorantes,
-                          aromas artificiales y con empaques biodegradables.</p>
-                    </div>
-          </div>
 </body>
 </html>
