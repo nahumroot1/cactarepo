@@ -11,119 +11,149 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-     
-        <style>
-            html, body {
-                background-color: #FDF5D7;
-                color: #1D2A54;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <style>
+        html, body {
+            background-color: #FDF5D7;
+            color: #1D2A54;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
 
-            .full-height {
-                height: 100vh;
-            }
+        .flex-center {
+            align-items: center;
+            justify-content: center;
+        }
 
-            .flex-center {
-                align-items: center;
-                justify-content: center;
-            }
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        .content {
+            text-align: left;
+        }
 
-            .content {
-                text-align: left;
-            }
+        .nav {
+            background-color: #F58174;
+            height: 55px;
+            width: 100%;
+            border-radius: 19px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-            .nav{
-                vertical-align: top;
-                background-color:#F58174;
-                height: 55px;
-                width: 100%;
-                border-radius: 19px;
-                display: block;
-                text-align: center;
-                overflow: hidden;
-            }
+        .texto {
+            max-width: 600px;
+        }
 
-            .texto {
-                max-width: 600px;
-                
-               
-            }
-            .texto h1{
-                margin: 0;
-                font-size: 37px;
-            }
-            .texto p{
-                margin-top: 5px;
-                font-size: 25px;
-                font-weight: bold;
-            }
+        .texto h1 {
+            margin: 0;
+            font-size: 37px;
+        }
 
-            .links > a {
-                float: left;
-                color: #1D2A54;
-                background-color: #F58174;
-                padding: 0 10px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-                text-align: center;
-                text-decoration: none;
-            }
+        .texto p {
+            margin-top: 5px;
+            font-size: 25px;
+            font-weight: bold;
+        }
 
-            .imagenes-container {
+        .links > a {
+            color: #1D2A54;
+            background-color: #F58174;
+            padding: 0 10px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .imagenes-container {
             background-color: #F4F9D2;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea en pantallas pequeñas */
+            flex-wrap: wrap;
             padding: 10px;
-            width: 100%; /* Toma el ancho completo del contenedor */
-            max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
-            margin: 0 auto; /* Centra el contenedor en pantallas grandes */
-            }
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .img {
+            width: 18.9%;
+            height: auto;
+        }
+
+        .img2 {
+            width: 350px;
+            height: 350px;
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        /* Media queries para pantallas medianas */
+        @media (max-width: 768px) {
             .img {
-              width: 18.9%; /* Cada imagen toma el 20% del ancho del contenedor */
-              height: auto;
-              
+                width: 32%;
             }
 
-            /* Media query para pantallas medianas */
-             @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .texto h1 {
+                font-size: 28px;
+            }
+
+            .texto p {
+                font-size: 20px;
+            }
+
+            .nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+        }
+
+        /* Media queries para pantallas pequeñas */
+        @media (max-width: 480px) {
             .img {
-               width: 32%; /* Cada imagen toma casi la mitad del ancho en pantallas medianas */
-                }
+                width: 100%;
             }
 
-            /* Media query para pantallas pequeñas */
-            @media (max-width: 480px) {
-            .img {
-            width: 100%; /* Cada imagen toma el ancho completo en pantallas pequeñas */
+            .img2 {
+                width: 250px;
+                height: auto;
             }
-            }
-            
-            .img2{
-                width: 350px;
-                height: 350px;
-            }
-            
-            .contenedor{
-                display: flex; 
-                align-items: center;
-                gap: 20px;
-            }
-        </style>
 
+            .texto h1 {
+                font-size: 24px;
+            }
+
+            .texto p {
+                font-size: 18px;
+            }
+
+            .links > a {
+                font-size: 10px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
 
     <div id="barra" class="nav">
         @if (Route::has('login'))
@@ -138,14 +168,10 @@
                 @auth
                     <a>{{ Auth::user()->name }} | </a>
                     <a href="{{ url('/home') }}">Inicio</a>
-                    <!-- Botón de Logout -->
-                    <a href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Salir
                     </a>
                     
-                    <!-- Formulario oculto para el logout -->
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
@@ -155,10 +181,7 @@
             </div>
         @endif                 
     </div>
-</head>
-<body>
 
-    <!-- Contenido de la página -->
     <div id="imagenes" class="imagenes-container">
         <img src="parabenos.png" class="img">
         <img src="organicos.png" class="img">
