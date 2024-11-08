@@ -21,46 +21,27 @@
             margin: 0;
         }
 
-        .flex-center {
-            align-items: center;
-            justify-content: center;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: left;
-        }
-
         .nav {
             background-color: #F58174;
             height: 55px;
             width: 100%;
             border-radius: 19px;
-            text-align: center;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            padding: 0 20px;
+            position: relative;
         }
 
-        .texto {
-            max-width: 600px;
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
         }
 
-        .texto h1 {
-            margin: 0;
-            font-size: 37px;
-        }
-
-        .texto p {
-            margin-top: 5px;
-            font-size: 25px;
-            font-weight: bold;
+        .links {
+            display: flex;
+            gap: 10px;
         }
 
         .links > a {
@@ -74,90 +55,38 @@
             text-transform: uppercase;
         }
 
-        .imagenes-container {
-            background-color: #F4F9D2;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            padding: 10px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .img {
-            width: 18.9%;
-            height: auto;
-        }
-
-        .img2 {
-            width: 350px;
-            height: 350px;
-        }
-
-        .contenedor {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            text-align: center;
-        }
-
-        /* Media queries para pantallas medianas */
+        /* Estilos para el menú desplegable en pantallas pequeñas */
         @media (max-width: 768px) {
-            .img {
-                width: 32%;
-            }
-
-            .contenedor {
+            .links {
+                display: none;
                 flex-direction: column;
-                text-align: center;
-            }
-
-            .texto h1 {
-                font-size: 28px;
-            }
-
-            .texto p {
-                font-size: 20px;
-            }
-
-            .nav {
-                flex-direction: column;
-                padding: 10px;
-            }
-        }
-
-        /* Media queries para pantallas pequeñas */
-        @media (max-width: 480px) {
-            .img {
                 width: 100%;
+                background-color: #F58174;
+                position: absolute;
+                top: 55px;
+                left: 0;
+                padding: 10px;
+                border-radius: 0 0 19px 19px;
             }
 
-            .img2 {
-                width: 250px;
-                height: auto;
+            .links.show {
+                display: flex;
             }
 
-            .texto h1 {
-                font-size: 24px;
-            }
-
-            .texto p {
-                font-size: 18px;
-            }
-
-            .links > a {
-                font-size: 10px;
-                padding: 5px;
+            .menu-icon {
+                display: block;
+                color: #1D2A54;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Barra de navegación -->
     <div id="barra" class="nav">
+        <span class="menu-icon" onclick="toggleMenu()">☰</span> <!-- Icono de menú (hamburger) -->
         @if (Route::has('login'))
-            <div id="vistaingreso" class="top-right links">
+            <div id="vistaingreso" class="links">
                 <a href="{{ route('sales') }}">Sales de Baño</a>
                 <a href="{{ route('mascarillas') }}">Mascarillas Faciales</a>
                 <a href="{{ route('jabones') }}">Jabones Artesanales</a>
@@ -182,22 +111,11 @@
         @endif                 
     </div>
 
-    <div id="imagenes" class="imagenes-container">
-        <img src="parabenos.png" class="img">
-        <img src="organicos.png" class="img">
-        <img src="aromas.png" class="img">
-        <img src="empaques.png" class="img">
-        <img src="cruelty.png" class="img">
-    </div>
-    
-    <div id="contenido" class="contenedor">
-        <img src="logo.jpg" class="img2"> 
-        <div id="texto" class="texto">
-            <h1>¿QUIÉNES SOMOS?</h1> 
-            <p>Somos una empresa mexicana que formula, produce y ofrece productos cosméticos
-             y de higiene personal orgánicos, libres de: derivados de petróleo, colorantes,
-              aromas artificiales y con empaques biodegradables.</p>
-        </div>
-    </div>
+    <script>
+        function toggleMenu() {
+            const links = document.getElementById("vistaingreso");
+            links.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
