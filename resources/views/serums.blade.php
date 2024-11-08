@@ -55,6 +55,86 @@
             text-transform: uppercase;
         }
 
+        .imagenes-container {
+    background-color: #F4F9D2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.img {
+    width: 18.9%; /* Tamaño general para pantallas grandes */
+    height: auto;
+}
+
+.contenedor {
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+    /* Para la sección de imágenes */
+    .img {
+        width: 32%; /* Las imágenes toman más espacio en pantallas medianas */
+    }
+
+    /* Para la sección de contenido */
+    .contenedor {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center;
+        text-align: center;
+    }
+
+    .img2 {
+        width: 250px; /* Ajusta el tamaño de la imagen del logo */
+        height: auto;
+    }
+
+    .texto h1 {
+        font-size: 28px; /* Ajusta el tamaño del encabezado */
+    }
+
+    .texto p {
+        font-size: 20px; /* Ajusta el tamaño del texto del párrafo */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    /* Para la sección de imágenes */
+    .img {
+        width: 100%; /* Las imágenes ocupan el 100% en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+
+    /* Para la sección de contenido */
+    .contenedor {
+        flex-direction: column; /* Mantiene el diseño vertical */
+        text-align: center;
+    }
+
+    .img2 {
+        width: 200px; /* Reduce el tamaño de la imagen del logo */
+        height: auto;
+    }
+
+    .texto h1 {
+        font-size: 24px; /* Reduce el tamaño del encabezado */
+    }
+
+    .texto p {
+        font-size: 16px; /* Reduce el tamaño del párrafo */
+    }
+}
+
         /* Estilos para el menú desplegable en pantallas pequeñas */
         @media (max-width: 768px) {
             .links {
@@ -119,5 +199,23 @@
             links.classList.toggle("show");
         }
     </script>
+
+<div id="imagenes" class="imagenes-container">
+            <img src="parabenos.png" class="img">
+            <img src="organicos.png" class="img">
+            <img src="aromas.png" class="img">
+            <img src="empaques.png" class="img">
+            <img src="cruelty.png" class="img">
+            </div>
+            
+            <div id="contenido" class="contenedor">
+                <img src="logo.jpg" class="img2"> 
+                    <div id="texto" class="texto">
+                        <h1>¿QUIÉNES SOMOS?</h1> 
+                        <p>Somos una empresa mexicana que formula, produce y ofrece productos cosméticos
+                         y de higiene personal orgánicos, libres de: derivados de petróleo, colorantes,
+                          aromas artificiales y con empaques biodegradables.</p>
+                    </div>
+          </div>
 </body>
 </html>
