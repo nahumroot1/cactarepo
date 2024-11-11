@@ -56,46 +56,84 @@
         }
 
         .imagenes-container {
-            background-color: #F4F9D2;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea en pantallas pequeñas */
-            padding: 10px;
-            width: 100%; /* Toma el ancho completo del contenedor */
-            max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
-            margin: 0 auto; /* Centra el contenedor en pantallas grandes */
-            }
+    background-color: #F4F9D2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+}
 
-            .img2{
-                width: 350px;
-                height: 350px;
-            }
-            
-            .contenedor{
-                display: flex; 
-                align-items: center;
-                gap: 20px;
-            }
+.img {
+    width: 18.9%; /* Tamaño general para pantallas grandes */
+    height: auto;
+}
 
-            .img {
-              width: 18.9%; /* Cada imagen toma el 20% del ancho del contenedor */
-              height: auto;
-              
-            }
+.contenedor {
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
 
-            .texto {
-                max-width: 600px;
-            }
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+    /* Para la sección de imágenes */
+    .img {
+        width: 32%; /* Las imágenes toman más espacio en pantallas medianas */
+    }
 
-            .texto h1{
-                margin: 0;
-                font-size: 37px;
-            }
-            .texto p{
-                margin-top: 5px;
-                font-size: 25px;
-                font-weight: bold;
-            }
+    /* Para la sección de contenido */
+    .contenedor {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center;
+        text-align: center;
+    }
+
+    .img2 {
+        width: 250px; /* Ajusta el tamaño de la imagen del logo */
+        height: auto;
+    }
+
+    .texto h1 {
+        font-size: 28px; /* Ajusta el tamaño del encabezado */
+    }
+
+    .texto p {
+        font-size: 20px; /* Ajusta el tamaño del texto del párrafo */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    /* Para la sección de imágenes */
+    .img {
+        width: 100%; /* Las imágenes ocupan el 100% en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+
+    /* Para la sección de contenido */
+    .contenedor {
+        flex-direction: column; /* Mantiene el diseño vertical */
+        text-align: center;
+    }
+
+    .img2 {
+        width: 200px; /* Reduce el tamaño de la imagen del logo */
+        height: auto;
+    }
+
+    .texto h1 {
+        font-size: 24px; /* Reduce el tamaño del encabezado */
+    }
+
+    .texto p {
+        font-size: 16px; /* Reduce el tamaño del párrafo */
+    }
+}
 
         /* Estilos para el menú desplegable en pantallas pequeñas */
         @media (max-width: 768px) {
@@ -120,6 +158,17 @@
                 color: #1D2A54;
             }
         }
+
+        .texto h1{
+                margin: 0;
+                font-size: 37px;
+            }
+
+            .texto p{
+                margin-top: 5px;
+                font-size: 25px;
+                font-weight: bold;
+            }
     </style>
 </head>
 <body>
