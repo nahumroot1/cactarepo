@@ -178,9 +178,10 @@
     </div>
 
     <h1>Modo de aplicación:</h1>
-    <p>*Adiciona las sales en agua caliente (para pies de 1/3 a 1/2 taza, para tina de 2/3 a 1 taza)
-    y espera a que se disuelvan.
-    *Sumerge el cuerpo o pies de 15- 20 minutos o hasta que se enfrie el agua.
+    <p>
+        *Adiciona las sales en agua caliente (para pies de 1/3 a 1/2 taza, para tina de 2/3 a 1 taza)
+    y espera a que se disuelvan.<br>
+    *Sumerge el cuerpo o pies de 15- 20 minutos o hasta que se enfrie el agua.<br>
     *Al salir no es necesario enjuagar. Puedes reutilizar el agua para riego o la taza del baño.</p>
         
 
