@@ -52,6 +52,7 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 16px 0; 
         }
 
         /* Imagen del producto */
@@ -72,11 +73,13 @@
             font-size: 1em;
             color: #666;
             margin-top: 8px;
+            font-weight: bold;
         }
 
         /* Contenedor de texto */
         .text-container {
             flex: 1;
+            font-weight: bold;
         }
 
 
@@ -158,15 +161,27 @@
             links.classList.toggle("show");
         }
     </script>
-         <div class="product-container">
+    <div class="product-container">
         <div class="text-container">
-            <h1>ROMERO Y NARANJA (250g)</h1>
+            <h1>ROMERO Y NARANJA (250g)  $90</h1>
             <p>Mezcla de minerales adicionados con cáscara de naranja y romero. Tienen propiedades antiinflamatorias, relajantes y antimicrobianas.</p>
         </div>
         <img src="logo.jpg" class="img" alt="Imagen de Romero y Naranja">
     </div>
 
+    <div class="product-container">
+        <div class="text-container">
+            <h1>ALCANFOR Y ALOE VERA(250g)  $90</h1>
+            <p>Mezcla de minerales adicionados con cáscara de naranja y romero. Tienen propiedades antiinflamatorias, relajantes y antimicrobianas.</p>
+        </div>
+        <img src="logo.jpg" class="img" alt="Imagen de Romero y Naranja">
+    </div>
 
+    <h1>Modo de aplicación:</h1>
+    <p>*Adiciona las sales en agua caliente (para pies de 1/3 a 1/2 taza, para tina de 2/3 a 1 taza)
+    y espera a que se disuelvan.
+    *Sumerge el cuerpo o pies de 15- 20 minutos o hasta que se enfrie el agua.
+    *Al salir no es necesario enjuagar. Puedes reutilizar el agua para riego o la taza del baño.</p>
         
 
 </body>
