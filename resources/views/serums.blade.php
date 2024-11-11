@@ -158,6 +158,17 @@
                 color: #1D2A54;
             }
         }
+
+        .texto h1{
+                margin: 0;
+                font-size: 37px;
+            }
+
+            .texto p{
+                margin-top: 5px;
+                font-size: 25px;
+                font-weight: bold;
+            }
     </style>
 </head>
 <body>
