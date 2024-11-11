@@ -44,6 +44,44 @@
             gap: 10px;
         }
 
+        .product-container {
+            display: flex;
+            align-items: center; /* Alinea imagen y texto en el mismo nivel vertical */
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Imagen del producto */
+        .img {
+            width: 150px; /* Tamaño de la imagen */
+            height: auto;
+            margin-left: 20px; /* Espacio entre el texto y la imagen */
+        }
+
+        /* Título del producto */
+        h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        /* Descripción del producto */
+        p {
+            font-size: 1em;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* Contenedor de texto */
+        .text-container {
+            flex: 1;
+        }
+
+
+
+        
         .links > a {
             color: #1D2A54;
             background-color: #F58174;
@@ -54,7 +92,7 @@
             text-decoration: none;
             text-transform: uppercase;
         }
-
+       
         /* Estilos para el menú desplegable en pantallas pequeñas */
         @media (max-width: 768px) {
             .links {
@@ -78,6 +116,7 @@
                 color: #1D2A54;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -119,5 +158,16 @@
             links.classList.toggle("show");
         }
     </script>
+         <div class="product-container">
+        <div class="text-container">
+            <h1>ROMERO Y NARANJA (250g)</h1>
+            <p>Mezcla de minerales adicionados con cáscara de naranja y romero. Tienen propiedades antiinflamatorias, relajantes y antimicrobianas.</p>
+        </div>
+        <img src="logo.jpg" class="img" alt="Imagen de Romero y Naranja">
+    </div>
+
+
+        
+
 </body>
 </html>
