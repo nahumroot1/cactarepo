@@ -44,6 +44,44 @@
             gap: 10px;
         }
 
+        .product-container {
+            display: flex;
+            align-items: center; /* Alinea imagen y texto en el mismo nivel vertical */
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 16px 0; 
+        }
+
+        /* Imagen del producto */
+        .img {
+            width: 150px; /* Tamaño de la imagen */
+            height: auto;
+            margin-left: 20px; /* Espacio entre el texto y la imagen */
+        }
+
+        /* Título del producto */
+        h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        /* Descripción del producto */
+        p {
+            font-size: 1em;
+            color: #666;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* Contenedor de texto */
+        .text-container {
+            flex: 1;
+            font-weight: bold;
+        }
+
         .links > a {
             color: #1D2A54;
             background-color: #F58174;
@@ -119,5 +157,53 @@
             links.classList.toggle("show");
         }
     </script>
+
+<div class="product-container">
+        <div class="text-container">
+            <h1>EXFOLIANTE - ARCILLA VERDE (50g)  $120.00</h1>
+            <p>Ideal para pieles grasas. Eficaz para combatir acné e
+            imperfecciones ya que es antimicrobiana y antimicótica.</p>
+        </div>
+        <img src="masc1.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>REJUVENECEDORA - ARCILLA BLANCA (50g) $120.00</h1>
+            <p>Ideal para pieles maduras, secas y/o sensibles. Hidratante,
+            revitalizante y excelente para disminuir las líneas de expresión.</p>
+        </div>
+        <img src="masc2.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>ANTIOXIDANTE- ARCILLA ROJA (50g) $120</h1>
+            <p>Ideal para pieles mixtas. Hidratante, cicatrizante, antioxidante,
+            aclara y desvanece manchas.</p>
+        </div>
+        <img src="masc3.jpg" class="img" >
+    </div>
+
+    
+
+    <h1>Modo de aplicación:</h1>
+    <p>
+    *Mezclar la cantidad deseada hasta homogeneizar, hidratar si se desea.<br>
+    *Aplicar en rostro y cuello previamente lavados.<br>
+    *Dejar actuar 15-20 minutos.<br>
+    *Enjuagar con abundante agua.<br>
+    *Continuar rutina de skincare.</p>
+
+    <H1>Recomendaciones generales:</H1>
+    <p>*Si se desea tener una consistencia con mayor fluidez, se puede adicionar agua de
+    garrafón o algún tónico a la cantidad de mascarilla que se vaya a utilizar.<br>
+    *Se recomienda aplicar 2- 3 veces por semana. Cada piel es distinta.<br>
+    *Si se tiene piel sensible y/o alergias se puede colocar una pequeña cantidad en el
+    cuello para verificar que no hay irritación.<br>
+    *Se recomienda mantener en un lugar fresco, sin luz solar directa. De preferencia en
+    refrigeración.</p>
+
+        
 </body>
 </html>
