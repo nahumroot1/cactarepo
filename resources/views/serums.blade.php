@@ -15,7 +15,7 @@
         html, body {
             background-color: #FDF5D7;
             color: #1D2A54;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Raleway', sans-serif4;
             font-weight: 100;
             height: 100vh;
             margin: 0;
@@ -42,6 +42,44 @@
         .links {
             display: flex;
             gap: 10px;
+        }
+
+        .product-container {
+            display: flex;
+            align-items: center; /* Alinea imagen y texto en el mismo nivel vertical */
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 16px 0; 
+        }
+
+        /* Imagen del producto */
+        .img {
+            width: 150px; /* Tamaño de la imagen */
+            height: auto;
+            margin-left: 20px; /* Espacio entre el texto y la imagen */
+        }
+
+        /* Título del producto */
+        h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        /* Descripción del producto */
+        p {
+            font-size: 1em;
+            color: #666;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* Contenedor de texto */
+        .text-container {
+            flex: 1;
+            font-weight: bold;
         }
 
         .links > a {
@@ -119,5 +157,96 @@
             links.classList.toggle("show");
         }
     </script>
+
+<div class="product-container">
+        <div class="text-container">
+            <h1>SÉRUM PARA BARBA Y BIGOTE $140.00 (30mL)</h1>
+            <p>Elaborado a base de aceites vegetales,
+                bergamota, romero y vitamina E.
+                Gracias a la mezcla de sus aceites, humecta la
+                piel bajo la barba, fortalece el folículo logrando
+                un crecimiento más rápido y parejo, brindando
+                suavidad y un gran aspecto a tu barba.</p>
+        </div>
+        <img src="masc1.jpg" class="img" >
+    </div>
+
+    <h1>Modo de aplicación:</h1>
+    <p>
+    *Con el gotero coloca de 3-5 gotas del sérum sobre tus dedos.<BR>
+    *Dispersa el sérum con ayuda de tus dedos sobre toda el área de tu bigote y barba.<BR>
+    *Puedes peinar tu barba y bigote a tu gusto.</p>
+
+    <H1>Recomendaciones generales:</H1>
+    <p>*Mantén tu serum en un lugar fresco.<BR>
+    *Evita luz solar directa.<BR>
+    *Manténgase en un frasco oscuro o ámbar.</p>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>TÓNICO DE ROSAS $180.00 (120 mL)</h1>
+            <p>Elaborado a base de hidrolato de rosas
+            Hidrata, revitaliza y limpia. Mantiene fresca tu
+            piel, aportando agua para cuidarte de la
+            contaminación. Sin colorantes ni fragancias
+            artificiales.</p>
+        </div>
+        <img src="masc2.jpg" class="img" >
+    </div>
+
+    <h1>Modo de aplicación:</h1>
+    <p>
+    *Utilizar en tu rutina se skincare, después del limpiador, como hidratante.  También puedes aplicar antes del maquillaje.<BR>
+*Rocía por todo tu rostro y deja que se absorba.<BR>
+*Aplicar con el rostro y cuello limpios.</p>
+
+    <H1>Recomendaciones generales:</H1>
+    <p>*Mantén tu tónico en un lugar fresco.<BR>
+*Evita luz solar directa.<BR>
+*Mantener siempre cerrado para evitar contaminación.</p>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>SÉRUM HIDRATANTE (30mL) $200.00 </h1>
+            <p>Sérum de ácido hialurónico, mantiene tu piel hidratada, sana,
+            suave y radiante. Para todo tipo de piel.</p>
+        </div>
+        <img src="masc3.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>SÉRUM REJUVENECE (30mL) $200.00</h1>
+            <p>Sérum de Colágeno y elastina. Renueva tu piel y bríndale
+            firmeza y elasticidad. No importa la edad, siempre hay que
+            dar un apapacho a nuestra piel.</p>
+        </div>
+        <img src="masc3.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>SÉRUM ANTIOX (30mL) $200.00 </h1>
+            <p>Sérum de Vitamina C. Protege tu piel de radicales libres,
+            aporta luminosidad y unifica el tono de tu piel</p>
+        </div>
+        <img src="masc3.jpg" class="img" >
+    </div>
+
+
+    
+
+    <h1>Modo de aplicación:</h1>
+    <p>
+    *Con el gotero coloca de 3-5 gotas del sérum sobre tus dedos.<BR>
+    *Dispersa el sérum con ayuda de tus dedos sobre toda el área de tu bigote y barba.<BR>
+    *Puedes peinar tu barba y bigote a tu gusto.</p>
+
+    <H1>Recomendaciones generales:</H1>
+    <p>*Mantén tu serum en un lugar fresco.<BR>
+    *Evita luz solar directa.<BR>
+    *Manténgase en un frasco oscuro o ámbar.</p>
+
+        
 </body>
 </html>

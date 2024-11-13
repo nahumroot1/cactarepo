@@ -15,7 +15,7 @@
         html, body {
             background-color: #FDF5D7;
             color: #1D2A54;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Raleway', sans-serif4;
             font-weight: 100;
             height: 100vh;
             margin: 0;
@@ -42,6 +42,44 @@
         .links {
             display: flex;
             gap: 10px;
+        }
+
+        .product-container {
+            display: flex;
+            align-items: center; /* Alinea imagen y texto en el mismo nivel vertical */
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 16px 0; 
+        }
+
+        /* Imagen del producto */
+        .img {
+            width: 150px; /* Tamaño de la imagen */
+            height: auto;
+            margin-left: 20px; /* Espacio entre el texto y la imagen */
+        }
+
+        /* Título del producto */
+        h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        /* Descripción del producto */
+        p {
+            font-size: 1em;
+            color: #666;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* Contenedor de texto */
+        .text-container {
+            flex: 1;
+            font-weight: bold;
         }
 
         .links > a {
@@ -119,6 +157,85 @@
             links.classList.toggle("show");
         }
     </script>
+
+<div class="product-container">
+        <div class="text-container">
+            <h1>JABÓN DE CAFÉ (100g) $70.00</h1>
+            <p>Elaborado con aceites y mantecas vegetales de la mejor
+            calidad y café de grano mexicano. Exfoliante, ayuda a
+            mejorar la circulación, da vitalidad y firmeza a tu piel.</p>
+        </div>
+        <img src="masc1.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>JABÓN DE MENTA Y ALOE VERA (100g) $70.00</h1>
+            <p>Elaborado con aceites y mantecas vegetales, gel de aloe
+            vera y menta. Hidratante, refrescante, ayuda a mantener la
+            piel tersa y suave.</p>
+        </div>
+        <img src="masc2.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>JABÓN DE AVENA Y LECHE (100g) $70.00 </h1>
+            <p>Elaborado con aceites y mantecas vegetales y una rica mezcla
+            de avena y leche. Hidratante, limpia los poros y equilibra el pH
+            de tu piel, por lo que ayuda a combatir irritaciones.</p>
+        </div>
+        <img src="masc3.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>JABÓN DE ARCILLA VERDE (100g) $80.00 </h1>
+            <p>Elaborado con aceites y mantecas vegetales, aceite de aguacate,
+            arcilla verde y aceite esencial de árbol de té. Ideal para pieles
+            grasas o con tendencia al acné. Limpia a profundidad,
+            antimicrobiano.</p>
+        </div>
+        <img src="masc3.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>JABÓN DE ARCILLA ROJA (100g) $80.00 </h1>
+            <p>Elaborado con aceites y mantecas vegetales, arcilla roja, agua
+            de rosas y aceite esencial de lavanda. Ideal para pieles sensibles
+            y delicadas. Elimina impurezas, hidrata y regenera la piel,
+            dejando el cutis suave.</p>
+        </div>
+        <img src="masc3.jpg" class="img" >
+    </div>
+
+    <div class="product-container">
+        <div class="text-container">
+            <h1>JABÓN DE CARBÓN ACTIVADO (100g) $80.00 </h1>
+            <p>Elaborado con aceites y mantecas vegetales, carbón activado y aceite
+            esencial de árbol de té. Limpia a profundidad. Antibacterial,
+            desintoxicante, seborregulador, desvanece manchas.</p>
+        </div>
+        <img src="masc3.jpg" class="img" >
+    </div>
+
+    
+
+    <h1>Modo de aplicación:</h1>
+    <p>
+    Jabones en barra elaborados artesanalmente con aceites y mantecas naturales,
+    plantas e ingredientes vegetales y aceites esenciales.</p>
+
+    <p>
+    Nuestros jabones son elaborados por saponificación en frío, con este proceso se
+    aprovechan todos las propiedades y beneficios de cada uno de los ingredientes
+    utilizados.</p>
+
+    <H1>Recomendaciones generales:</H1>
+    <p>*Para mayor durabilidad y evita crecimiento de microorganismos coloca tu jabón en un
+    lugar que se mantenga seco y sin exposición solar directa.</p>
+
+        
 </body>
 </html>
-
