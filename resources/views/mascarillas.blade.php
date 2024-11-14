@@ -164,7 +164,7 @@
             <p>Ideal para pieles grasas. Eficaz para combatir acné e
             imperfecciones ya que es antimicrobiana y antimicótica.</p>
         </div>
-        <img src="masc1.jpg" class="img" >
+        <img src="masc1.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -173,7 +173,7 @@
             <p>Ideal para pieles maduras, secas y/o sensibles. Hidratante,
             revitalizante y excelente para disminuir las líneas de expresión.</p>
         </div>
-        <img src="masc2.jpg" class="img" >
+        <img src="masc2.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -182,7 +182,7 @@
             <p>Ideal para pieles mixtas. Hidratante, cicatrizante, antioxidante,
             aclara y desvanece manchas.</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="masc3.webp" class="img" >
     </div>
 
     

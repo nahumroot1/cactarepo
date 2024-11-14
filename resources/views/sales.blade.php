@@ -166,7 +166,7 @@
             <h1>ROMERO Y NARANJA (250g)  $90</h1>
             <p>Mezcla de minerales adicionados con cáscara de naranja y romero. Tienen propiedades antiinflamatorias, relajantes y antimicrobianas.</p>
         </div>
-        <img src="logo.jpg" class="img" alt="Imagen de Romero y Naranja">
+        <img src="sales.jpg" class="img" alt="Imagen de Romero y Naranja">
     </div>
 
     <div class="product-container">
@@ -174,7 +174,7 @@
             <h1>ALCANFOR Y ALOE VERA(250g)  $90</h1>
             <p>Mezcla de minerales adicionados con cáscara de naranja y romero. Tienen propiedades antiinflamatorias, relajantes y antimicrobianas.</p>
         </div>
-        <img src="logo.jpg" class="img" alt="Imagen de Romero y Naranja">
+        <img src="sales.jpg" class="img" alt="Imagen de Romero y Naranja">
     </div>
 
     <h1>Modo de aplicación:</h1>
