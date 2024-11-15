@@ -165,7 +165,7 @@
             calidad y café de grano mexicano. Exfoliante, ayuda a
             mejorar la circulación, da vitalidad y firmeza a tu piel.</p>
         </div>
-        <img src="masc1.jpg" class="img" >
+        <img src="jab1.webp" class="img" >
     </div>
 
     <div class="product-container">
