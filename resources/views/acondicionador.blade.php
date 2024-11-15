@@ -168,7 +168,7 @@
             humecta el cuero cabelludo. Nutre tu cabello.
            </p>
         </div>
-        <img src="masc2.jpg" class="img" >
+        <img src="acon1.webp" class="img" >
     </div>
 
     <h1>Modo de aplicación (shampoo y acondicionador) :</h1>

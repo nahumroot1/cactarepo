@@ -166,7 +166,7 @@
             ya que es aclarante; además ayuda al crecimiento y fortalecimiento
             del cabello.</p>
         </div>
-        <img src="masc1.jpg" class="img" >
+        <img src="sham1.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -177,7 +177,7 @@
             cabellos grasos, brinda suavidad, fortalece y promueve el
             crecimiento, además de ayudar a combatir la caspa.</p>
         </div>
-        <img src="masc2.jpg" class="img" >
+        <img src="sham1.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -187,7 +187,7 @@
             arcilla blanca, cáscara de naranja y romero. Fortalece el folículo y
             promueve el crecimiento, además ayuda a combatir la caspa.</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="sham1.webp" class="img" >
     </div>
 
     <h1>Modo de aplicación (shampoo y acondicionador) :</h1>

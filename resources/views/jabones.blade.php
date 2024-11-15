@@ -175,7 +175,7 @@
             vera y menta. Hidratante, refrescante, ayuda a mantener la
             piel tersa y suave.</p>
         </div>
-        <img src="masc2.jpg" class="img" >
+        <img src="jab2.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -185,7 +185,7 @@
             de avena y leche. Hidratante, limpia los poros y equilibra el pH
             de tu piel, por lo que ayuda a combatir irritaciones.</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="jab3.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -196,7 +196,7 @@
             grasas o con tendencia al acné. Limpia a profundidad,
             antimicrobiano.</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="jab4.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -207,7 +207,7 @@
             y delicadas. Elimina impurezas, hidrata y regenera la piel,
             dejando el cutis suave.</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="jab5.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -217,7 +217,7 @@
             esencial de árbol de té. Limpia a profundidad. Antibacterial,
             desintoxicante, seborregulador, desvanece manchas.</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="jab6.webp" class="img" >
     </div>
 
     

@@ -226,6 +226,18 @@
                         <p>Somos una empresa mexicana que formula, produce y ofrece productos cosméticos
                          y de higiene personal orgánicos, libres de: derivados de petróleo, colorantes,
                           aromas artificiales y con empaques biodegradables.</p>
+
+                          <h1>MISIÓN</h1> 
+                        <p>Proporcionamos a la comunidad una gama de productos de higiene y cuidado
+                        personal seguros y eficaces, en beneficio de nuestros clientes, colaboradores y el
+                        medio ambiente.</p>
+
+                          <h1>VISIÓN</h1> 
+                        <p>Cactácea es una empresa líder en la formulación y distribución a nivel Nacional de
+                        prodcutos de origen natural, destacándose por su innovación, confiabilidad y
+                        sevicio al cliente.</p>
+
+
                     </div>
           </div>
 </body>

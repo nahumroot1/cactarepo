@@ -168,7 +168,7 @@
                 un crecimiento más rápido y parejo, brindando
                 suavidad y un gran aspecto a tu barba.</p>
         </div>
-        <img src="masc1.jpg" class="img" >
+        <img src="ser1.webp" class="img" >
     </div>
 
     <h1>Modo de aplicación:</h1>
@@ -191,7 +191,7 @@
             contaminación. Sin colorantes ni fragancias
             artificiales.</p>
         </div>
-        <img src="masc2.jpg" class="img" >
+        <img src="ser2.webp" class="img" >
     </div>
 
     <h1>Modo de aplicación:</h1>
@@ -211,7 +211,7 @@
             <p>Sérum de ácido hialurónico, mantiene tu piel hidratada, sana,
             suave y radiante. Para todo tipo de piel.</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="ser1.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -221,7 +221,7 @@
             firmeza y elasticidad. No importa la edad, siempre hay que
             dar un apapacho a nuestra piel.</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="ser2.webp" class="img" >
     </div>
 
     <div class="product-container">
