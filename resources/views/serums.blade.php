@@ -211,7 +211,7 @@
             <p>Sérum de ácido hialurónico, mantiene tu piel hidratada, sana,
             suave y radiante. Para todo tipo de piel.</p>
         </div>
-        <img src="ser1.webp" class="img" >
+        <img src="ser3.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -221,7 +221,7 @@
             firmeza y elasticidad. No importa la edad, siempre hay que
             dar un apapacho a nuestra piel.</p>
         </div>
-        <img src="ser2.webp" class="img" >
+        <img src="ser4.webp" class="img" >
     </div>
 
     <div class="product-container">
@@ -230,7 +230,7 @@
             <p>Sérum de Vitamina C. Protege tu piel de radicales libres,
             aporta luminosidad y unifica el tono de tu piel</p>
         </div>
-        <img src="masc3.jpg" class="img" >
+        <img src="ser5.webp" class="img" >
     </div>
 
 
