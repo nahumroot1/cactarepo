@@ -33,6 +33,10 @@ Route::post('/logout', [Auth\LoginController::class, 'logout'])->name('logout');
 
 
 
+Route::post('/send-order', 'OrderController@sendOrder');
+
+
+
 
 Auth::routes();
 
