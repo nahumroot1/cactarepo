@@ -178,7 +178,7 @@
         @endauth
 
         @guest
-             <p><em>Inicia sesión para agregar productos al carrito.</em></p>
+             <p><em>Inicia sesión </em></p>
         @endguest
 
     </div>
@@ -195,7 +195,7 @@
     @endauth
 
     @guest
-        <p><em>Inicia sesión para agregar productos al carrito.</em></p>
+        <p><em>Inicia sesión</em></p>
     @endguest
 </div>
 

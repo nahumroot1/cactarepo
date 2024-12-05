@@ -169,6 +169,14 @@
                 suavidad y un gran aspecto a tu barba.</p>
         </div>
         <img src="ser1.webp" class="img" >
+        @auth
+        <button class="add-to-cart" data-name="SerumBarbaBigote" data-price="$140">Agregar al carrito</button>
+    @endauth
+
+    @guest
+        <p><em>Inicia sesión</em></p>
+    @endguest
+
     </div>
 
     <h1>Modo de aplicación:</h1>
@@ -192,6 +200,14 @@
             artificiales.</p>
         </div>
         <img src="ser2.webp" class="img" >
+        @auth
+        <button class="add-to-cart" data-name="Tonico-Rosas" data-price="$180">Agregar al carrito</button>
+    @endauth
+
+    @guest
+        <p><em>Inicia sesión</em></p>
+    @endguest
+
     </div>
 
     <h1>Modo de aplicación:</h1>
@@ -212,6 +228,14 @@
             suave y radiante. Para todo tipo de piel.</p>
         </div>
         <img src="ser3.webp" class="img" >
+        @auth
+        <button class="add-to-cart" data-name="Serum-Hidratante" data-price="$200">Agregar al carrito</button>
+    @endauth
+
+    @guest
+        <p><em>Inicia sesión</em></p>
+    @endguest
+
     </div>
 
     <div class="product-container">
@@ -222,6 +246,14 @@
             dar un apapacho a nuestra piel.</p>
         </div>
         <img src="ser4.webp" class="img" >
+        @auth
+        <button class="add-to-cart" data-name="Serum-Rejuvenece" data-price="$200">Agregar al carrito</button>
+    @endauth
+
+    @guest
+        <p><em>Inicia sesión</em></p>
+    @endguest
+
     </div>
 
     <div class="product-container">
@@ -231,9 +263,24 @@
             aporta luminosidad y unifica el tono de tu piel</p>
         </div>
         <img src="ser5.webp" class="img" >
+        @auth
+        <button class="add-to-cart" data-name="Serum-Antiox" data-price="$200">Agregar al carrito</button>
+    @endauth
+
+    @guest
+        <p><em>Inicia sesión</em></p>
+    @endguest
+
     </div>
 
+        <!-- Botón "Hacer pedido" -->
+@auth
+    <button id="place-order">Hacer pedido</button>
+@endauth
 
+@guest
+    <p><em>Inicia sesión para realizar un pedido.</em></p>
+@endguest
     
 
     <h1>Modo de aplicación:</h1>
@@ -249,4 +296,108 @@
 
         
 </body>
+<!-- Popup para capturar el número de contacto -->
+<div id="contact-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+    <div style="background: white; padding: 20px; border-radius: 8px; text-align: center;">
+        <h2>Ingrese su número de contacto</h2>
+        <input type="text" id="contact-number" placeholder="Número de contacto" style="margin: 10px 0; padding: 10px; width: 80%;" />
+        <button id="submit-order" style="padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 4px;">Enviar Pedido</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $(document).ready(function () {
+        // Carrito de compras
+        let cart = [];
+
+        // Mostrar popup para ingresar número de contacto
+        function showContactPopup() {
+            const popupHtml = `
+                <div id="contact-popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center;">
+                    <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; width: 300px;">
+                        <h2>Ingrese su número de contacto</h2>
+                        <input type="text" id="contact-number" placeholder="Número de contacto" style="margin: 10px 0; padding: 10px; width: 90%;" />
+                        <div style="margin-top: 15px;">
+                            <button id="submit-order" style="padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 4px;">Enviar Pedido</button>
+                            <button id="cancel-order" style="padding: 10px 20px; background: #dc3545; color: white; border: none; border-radius: 4px; margin-left: 10px;">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('body').append(popupHtml);
+
+            // Acción para enviar pedido
+            $('#submit-order').on('click', function () {
+                const contactNumber = $('#contact-number').val();
+                if (!contactNumber) {
+                    alert('Por favor, ingrese su número de contacto.');
+                    return;
+                }
+
+                sendOrder(contactNumber);
+                $('#contact-popup').remove();
+            });
+
+            // Acción para cancelar el pedido
+            $('#cancel-order').on('click', function () {
+                $('#contact-popup').remove();
+            });
+        }
+
+        // Agregar producto al carrito
+        $('.add-to-cart').on('click', function () {
+            const productName = $(this).data('name');
+            const productPrice = $(this).data('price');
+
+            cart.push({ name: productName, price: productPrice });
+
+            alert(`${productName} ha sido agregado al carrito.`);
+        });
+
+        // Mostrar popup al hacer pedido
+        $('#place-order').on('click', function () {
+            if (cart.length === 0) {
+                alert('El carrito está vacío.');
+                return;
+            }
+
+            showContactPopup(); // Mostrar el popup para el número de contacto
+        });
+
+        // Enviar pedido al servidor
+        function sendOrder(contactNumber) {
+            $.ajax({
+                url: '/send-order',
+                type: 'POST',
+                data: { 
+                    cart: cart,
+                    contact_number: contactNumber 
+                },
+                success: function (response) {
+                    if (response && response.message) {
+                        alert(response.message);
+                        cart = []; // Vaciar el carrito después de realizar el pedido
+                    } else {
+                        alert('Pedido enviado, pero la respuesta fue inesperada.');
+                    }
+                },
+                error: function (xhr) {
+                    let errorMessage = 'Error al enviar el pedido.';
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                        errorMessage = xhr.responseJSON.message;
+                    }
+                    alert(errorMessage);
+                }
+            });
+        }
+    });
+</script>
+
 </html>
